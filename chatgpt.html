@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+</style>
+<body>
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p>Loading, please wait...</p>
+  </div>
+
+  <script>
+   // Check if the user has already visited in this session
+   if (sessionStorage.getItem("loaded")) {
+      window.location.href = "index.html"; // Directly go to main page if already loaded
+    } else {
+      // Show loading screen for the first visit
+      setTimeout(() => {
+        sessionStorage.setItem("loaded", "true"); // Mark as loaded
+        window.location.href = "index.html"; // Redirect to main page
+      }, 3000); // 3 seconds loading time
+    }
+  </script>
+</body>
+</html>
