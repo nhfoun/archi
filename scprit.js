@@ -1,4 +1,4 @@
-          
+
 
 
 // testimonial js start
@@ -230,20 +230,4 @@ document.addEventListener("DOMContentLoaded", () => {
 // All scrol event End
 
 
-// let menu = document.getElementById("fuc");
-// let close = document.getElementById("fuc3");
-// let nav2 = document.getElementById("fuc2")
-// let navi = document.querySelector(".navigation")
-// menu.addEventListener('click',()=>{
-//     navi.style.transform = "translateX(0)";
-//     navi.style.opacity = "1";
-//     menu.style.display = "none";
-//     close.style.display = "block";
-// })
-// close.addEventListener('click',()=>{
-//     navi.style.transform = "translateX(200px)";
-//     navi.style.opacity = "0";
-//     menu.style.display = "block";
-//     close.style.display = "none";
-// })
 

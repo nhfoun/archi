@@ -1438,6 +1438,9 @@ color: #006669;
         margin-left: 10px;
         
     }
+    #not{
+        display: none;
+    }
 }
 @media (max-width:380px){
     .counter-wrap{
